@@ -1,0 +1,12 @@
+{
+    "files": {
+        "Readme.md": "b0d79323f093df84520adf61cf55ed62a13969dd0520322f287a3441ad2c94d8",
+        "index.js": "5f3d24818c5a1cbf697c5591d1395b60bb284ee6c5935aeaff9a6d1e52465fe7",
+        "module.json": "7e05f5bcd7d691ab6304bd6ce9c6555f7bd0c148bc4c26577fcf88724471ec50"
+    },
+    "defs": {
+        "S_ACTION_END": 5,
+        "S_ACTION_STAGE": 9,
+        "S_LOGIN": 13
+    }
+}
