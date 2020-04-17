@@ -1,5 +1,5 @@
 {
-    "disableAutoUpdate": false,
+    "disableAutoUpdate": true,
     "name": "Fast-Runeburst",
     "author": "Valk Discord",
     "description": "Runeburst Animation Cancel",
