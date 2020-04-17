@@ -29,11 +29,11 @@ module.exports = function ValkFastRB(mod) {
     	}
 	});
 
-	mod.hook('S_LOGIN', 13, DEFAULT_HOOK_SETTINGS, event => {
-	    gameId = event.gameId;
-	    model = event.templateId;
+	mod.hook('S_LOGIN', 'raw', { order : Infinity }, event => {
+	    gameId = mod.game.me.gameId;
+	    model = mod.game.me.templateId;
 	    job = (model - 10101) % 100;
-	    enabled = [JOB_VALK].includes(job);
+	    mod.settings.enabled = [JOB_VALK].includes(job);
 	});
 
 	mod.hook('S_ACTION_STAGE', 9, {order: -1000000, filter: {fake: null}}, event => {
