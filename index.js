@@ -1,3 +1,4 @@
+const DEFAULT_HOOK_SETTINGS = {order: -1000000, filter: {fake: false}};
 const JOB_VALK = 12;
 
 const SKILL_RUNEBURST = 161200;
@@ -28,11 +29,11 @@ module.exports = function ValkFastRB(mod) {
     	}
 	});
 
-	mod.hook('S_LOGIN', '14', { order : Infinity }, event => {
-	    gameId = mod.game.me.gameId;
-	    model = mod.game.me.templateId;
+	mod.hook('S_LOGIN', 14, DEFAULT_HOOK_SETTINGS, event => {
+	    gameId = event.gameId;
+	    model = event.templateId;
 	    job = (model - 10101) % 100;
-	    mod.settings.enabled = [JOB_VALK].includes(job);
+	    enabled = [JOB_VALK].includes(job);
 	});
 
 	mod.hook('S_ACTION_STAGE', 9, {order: -1000000, filter: {fake: null}}, event => {
